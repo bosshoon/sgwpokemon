@@ -57,9 +57,9 @@ class Pokeslack:
 
     def _send(self, message):
         payload = {
-            'username': 'Poké Alert!',
+            'username': 'SGW Bot',
             'text': message,
-            'icon_emoji': ':ghost:'
+            'icon_emoji': ':tiger:'
         }
         s = json.dumps(payload)
         r = requests.post(self.slack_webhook_url, data=s)
