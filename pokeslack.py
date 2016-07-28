@@ -46,7 +46,7 @@ class Pokeslack:
         map_url = 'https://pokevision.com/#/@%s,%s' % (pokemon.position[0], pokemon.position[1])
         time_remaining = pokemon.expires_in_str()
         stars = ''.join([':star:' for x in xrange(pokemon.rarity)])
-        message = '<%s|%s> <%s|%s away> expiring in %s%s' % (pokedex_url, pokemon.name, map_url, miles_away, time_remaining, from_lure)
+        message = '%s <%s|%s away> expiring in %s%s' % (pokemon.name, map_url, miles_away, time_remaining, from_lure)
         # bold message if rarity > 4
         if pokemon.rarity >= 4:
             message = '*%s*' % message
